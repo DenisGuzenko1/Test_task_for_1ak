@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Администрирование{% endblock %}
+{% block content %}
+
+{% if registration %}
+{% for info in registration %}
+<h3 style="text-align: center; margin-top: 100px;">
+    {{ info.user_id }}&nbsp;|
+    {{ info.user_name }}&nbsp;
+    {{ info.user_surname }}&nbsp;
+    {{ info.book_name }}&nbsp;
+    Взял: {{ info.date_take }}&nbsp;
+    {% if info.date_return %}
+    Вернул:{{ info.date_return }}&nbsp;
+    {% else %}
+    Не вернул
+    {% endif %}
+</h3>
+
+{% endfor %}
+
+{% else %}
+<h1 style="text-align: center; margin-top: 100px;">Тут пока что пусто</h1>
+{% endif %}
+
+
+{% endblock %}

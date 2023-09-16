@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Создайте книгу{% endblock %}
+{%  block content %}
+<link rel="stylesheet" href="{% static '/css/base.css' %}">
+<h2>Создание книги</h2>
+<form method="post" enctype="multipart/form-data" style="box-sizing: border-box; background-color: black; color: white; padding: 30px 15px; z-index: -1;"
+      action="{% url 'create' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-secondary">Создать</button>
+</form>
+{% endblock %}

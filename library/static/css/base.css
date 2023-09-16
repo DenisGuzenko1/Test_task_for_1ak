@@ -1,0 +1,43 @@
+body{
+    background: #794738; /* Цвет фона */
+    color: #ffffff; /* Цвет текста */
+}
+
+
+.users{
+    text-decoration: none;
+    transition: all .3s;
+    color: #E1C9B2;
+    display: block;
+}
+
+.users:hover{
+    color: #d3a478;
+}
+
+#id_name{
+    width: 315px;
+    background-color: #EBECEE;
+    border-radius: 10px;
+    border-color: #FFF554;
+    height: 40px;
+    border-width: 3px;
+}
+
+#id_surname{
+    width: 280px;
+    background-color: #EBECEE;
+    border-radius: 10px;
+    border-color: #FFF554;
+    height: 40px;
+    border-width: 3px;
+}
+
+#id_patronymic{
+    width: 280px;
+    background-color: #EBECEE;
+    border-radius: 10px;
+    border-color: #FFF554;
+    height: 40px;
+    border-width: 3px;
+}

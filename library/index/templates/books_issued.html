@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Выданные книги{% endblock %}
+{% block content %}
+{% if users_books %}
+<div class="container py-5" style="margin-left:199px;">
+    <div class="row">
+    {% for book in users_books %}
+    <div class="col-12 col-md-3 mb-3" style="margin-top: 100px; margin-left: 30px;">
+        <div class="card h-100">
+            <p class="aligncenter">
+                {% if book.book_img %}
+                <center><p><img src="{{ book.book_img.url }}" alt="" width="35%"></p></center>
+                {% else %}
+                <p></p>
+                {% endif %}
+            </p>
+            <style>.aligncenter {text-align: center;}</style>
+            <div class="card-body">
+                <h5 class="card-title">Автор: {{ book.book_author }}</h5>
+                <h5 class="card-title">Название: {{ book.book_name }}</h5>
+                <h6 class="card-text">Опубликована: {{ book.publication_date }}</h6>
+                <h6 class="card-text">Код книги: {{ book.id}}</h6>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    </div>
+    </div>
+{% else %}
+    <h1 style="text-align: center; margin-top: 100px;">Мы не выдавали книги.</h1>
+{% endif %}
+{% endblock %}
